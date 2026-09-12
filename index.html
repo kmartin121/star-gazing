@@ -13,208 +13,9 @@
   } catch (e) {}
 })();
 </script>
-<style>
-  :root {
-    --bg: #fff;
-    --fg: #1a1a1a;
-    --muted: #555;
-    --label: #666;
-    --footer: #777;
-    --border: #ccc;
-    --border-strong: #222;
-    --hairline: #eee;
-    --meta-bg: #f5f5f7;
-    --meta-border: #ddd;
-    --hover-bg: #fafafa;
-    --notes: #222;
-    --toggle-bg: #fff;
-    --toggle-border: #888;
-  }
-  [data-theme="dark"] {
-    --bg: #12151c;
-    --fg: #e8eaed;
-    --muted: #9aa0a6;
-    --label: #9aa0a6;
-    --footer: #8b9198;
-    --border: #3a404a;
-    --border-strong: #c5c9d0;
-    --hairline: #2a303a;
-    --meta-bg: #1a1f28;
-    --meta-border: #3a404a;
-    --hover-bg: #1c222c;
-    --notes: #d5d8dc;
-    --toggle-bg: #1a1f28;
-    --toggle-border: #8b9198;
-  }
-  * { box-sizing: border-box; }
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    color: var(--fg);
-    background: var(--bg);
-    margin: 0;
-    padding: 16px;
-    font-size: 14px;
-    line-height: 1.4;
-    max-width: 720px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .theme-bar {
-    display: flex;
-    justify-content: flex-end;
-    margin-bottom: 8px;
-  }
-  .theme-toggle {
-    font: inherit;
-    font-size: 11px;
-    color: var(--fg);
-    background: var(--toggle-bg);
-    border: 1px solid var(--toggle-border);
-    border-radius: 4px;
-    padding: 4px 10px;
-    cursor: pointer;
-  }
-  .theme-toggle:hover {
-    background: var(--hover-bg);
-  }
-  .header-table {
-    width: 100%;
-    border-bottom: 2px solid var(--border-strong);
-    padding-bottom: 8px;
-    margin-bottom: 14px;
-  }
-  .title {
-    font-size: 20px;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-  }
-  .subtitle {
-    font-size: 12px;
-    color: var(--muted);
-  }
-  .meta-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 8px;
-    background: var(--meta-bg);
-    border: 1px solid var(--meta-border);
-    border-radius: 4px;
-    padding: 8px 10px;
-    margin-bottom: 16px;
-  }
-  .meta-item strong {
-    display: block;
-    font-size: 9px;
-    text-transform: uppercase;
-    color: var(--label);
-    letter-spacing: 0.5px;
-  }
-  .session {
-    display: block;
-    text-decoration: none;
-    color: inherit;
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    padding: 12px 14px;
-    margin-bottom: 10px;
-  }
-  .session:hover {
-    border-color: var(--toggle-border);
-    background: var(--hover-bg);
-  }
-  .session-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    gap: 12px;
-    border-bottom: 1px solid var(--hairline);
-    padding-bottom: 4px;
-    margin-bottom: 6px;
-  }
-  .session-name {
-    font-size: 15px;
-    font-weight: 700;
-  }
-  .session-date {
-    font-size: 12px;
-    color: var(--muted);
-    white-space: nowrap;
-  }
-  .session-notes {
-    font-size: 13px;
-    color: var(--notes);
-  }
-  .footer {
-    margin-top: 14px;
-    border-top: 1px solid var(--border);
-    padding-top: 8px;
-    font-size: 11px;
-    color: var(--footer);
-  }
-  @media screen and (max-width: 560px) {
-    .meta-grid { grid-template-columns: 1fr; }
-    .session-header { flex-direction: column; gap: 2px; }
-  }
-  @media print {
-    @page {
-      size: letter portrait;
-      margin: 0.35in;
-    }
-    :root, [data-theme="dark"] {
-      --bg: #fff !important;
-      --fg: #1a1a1a !important;
-      --muted: #555 !important;
-      --label: #666 !important;
-      --footer: #777 !important;
-      --border: #ccc !important;
-      --border-strong: #222 !important;
-      --hairline: #eee !important;
-      --meta-bg: #f5f5f7 !important;
-      --meta-border: #ddd !important;
-      --hover-bg: #fafafa !important;
-      --notes: #222 !important;
-    }
-    .theme-bar { display: none !important; }
-    body {
-      max-width: none;
-      padding: 0;
-      font-size: 10.5px;
-      background: #fff !important;
-      color: #1a1a1a !important;
-      print-color-adjust: exact;
-      -webkit-print-color-adjust: exact;
-    }
-    .meta-grid {
-      grid-template-columns: repeat(3, 1fr);
-      background: #f5f5f7 !important;
-      border-color: #ddd !important;
-      color: #1a1a1a !important;
-    }
-    .session {
-      border-color: #ccc !important;
-      background: transparent !important;
-      color: #1a1a1a !important;
-    }
-    .session-header {
-      flex-direction: row;
-      border-color: #eee !important;
-    }
-    .session:hover {
-      border-color: #ccc;
-      background: transparent;
-    }
-    .subtitle, .session-date, .footer { color: #555 !important; }
-    .session-notes { color: #222 !important; }
-    .header-table { border-color: #222 !important; }
-  }
-</style>
+<link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body>
-
-  <div class="theme-bar">
-    <button type="button" class="theme-toggle" id="theme-toggle" aria-pressed="false">Dark mode</button>
-  </div>
+<body data-page="index">
 
   <table class="header-table">
     <tr>
@@ -232,7 +33,7 @@
   <div class="meta-grid">
     <div class="meta-item">
       <strong>Sessions</strong>
-      2 nights logged
+      <span id="session-count">Loading…</span>
     </div>
     <div class="meta-item">
       <strong>Telescope</strong>
@@ -244,76 +45,30 @@
     </div>
   </div>
 
-  <a class="session" href="sat-9-12-2026.html">
-    <div class="session-header">
-      <span class="session-name">Session 2</span>
-      <span class="session-date">September 12, 2026</span>
+  <div class="filters" aria-label="Filter sessions">
+    <div class="filter-field">
+      <label for="filter-year">Year</label>
+      <select id="filter-year">
+        <option value="">All years</option>
+      </select>
     </div>
-    <div class="session-notes">
-      Saturn and Titan, the Pleiades, Aldebaran, the Orion Nebula and Trapezium, plus a Horsehead attempt. 2:30 AM – 4:30 AM EST.
+    <div class="filter-field">
+      <label for="filter-month">Month</label>
+      <select id="filter-month">
+        <option value="">All months</option>
+      </select>
     </div>
-  </a>
+  </div>
 
-  <a class="session" href="wed-9-9-2026.html">
-    <div class="session-header">
-      <span class="session-name">Session 1</span>
-      <span class="session-date">September 9, 2026</span>
-    </div>
-    <div class="session-notes">
-      Crescent Venus, Arcturus, Vega, an ISS flyover, and the Double Cluster. 7:44 PM – 9:00 PM EST.
-    </div>
-  </a>
+  <div class="session-status" id="session-status">Loading sessions…</div>
+  <div id="session-list"></div>
 
   <div class="footer">
     Newest session first. Open a night to read the full observation log.
   </div>
 
-<script>
-(function () {
-  var key = "stargazing-theme";
-  var root = document.documentElement;
-  var btn = document.getElementById("theme-toggle");
-  var savedTheme = null;
-
-  function isDark() {
-    return root.getAttribute("data-theme") === "dark";
-  }
-
-  function syncButton() {
-    var dark = isDark();
-    btn.textContent = dark ? "Light mode" : "Dark mode";
-    btn.setAttribute("aria-pressed", dark ? "true" : "false");
-  }
-
-  function setTheme(theme) {
-    if (theme === "dark") {
-      root.setAttribute("data-theme", "dark");
-    } else {
-      root.removeAttribute("data-theme");
-    }
-    try { localStorage.setItem(key, theme); } catch (e) {}
-    syncButton();
-  }
-
-  btn.addEventListener("click", function () {
-    setTheme(isDark() ? "light" : "dark");
-  });
-
-  window.addEventListener("beforeprint", function () {
-    savedTheme = isDark() ? "dark" : "light";
-    root.removeAttribute("data-theme");
-  });
-
-  window.addEventListener("afterprint", function () {
-    if (savedTheme === "dark") {
-      root.setAttribute("data-theme", "dark");
-    }
-    savedTheme = null;
-    syncButton();
-  });
-
-  syncButton();
-})();
-</script>
+<script src="assets/js/theme.js"></script>
+<script src="assets/js/sessions.js"></script>
+<script src="assets/js/index.js"></script>
 </body>
 </html>
