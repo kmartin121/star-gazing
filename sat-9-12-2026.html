@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Backyard Stargazing Log - Session 2</title>
+<style>
+  @page {
+    size: letter portrait;
+    margin: 0.35in;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #1a1a1a;
+    background: #fff;
+    margin: 0;
+    padding: 8px;
+    font-size: 10.5px;
+    line-height: 1.35;
+  }
+  .header-table {
+    width: 100%;
+    border-bottom: 2px solid #222;
+    padding-bottom: 4px;
+    margin-bottom: 8px;
+  }
+  .title {
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+  .subtitle {
+    font-size: 10.5px;
+    color: #555;
+  }
+  .meta-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6px;
+    background: #f5f5f7;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 6px 10px;
+    margin-bottom: 8px;
+  }
+  .meta-item strong {
+    display: block;
+    font-size: 8.5px;
+    text-transform: uppercase;
+    color: #666;
+    letter-spacing: 0.5px;
+  }
+  .log-entry {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 6px 8px;
+    margin-bottom: 6px;
+    page-break-inside: avoid;
+  }
+  .sketch-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px dashed #ddd;
+    padding-right: 6px;
+  }
+  .sketch-circle {
+    width: 62px;
+    height: 62px;
+    border: 1.2px solid #333;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #0d1117;
+    position: relative;
+    overflow: hidden;
+  }
+  .sketch-label {
+    font-size: 7.5px;
+    text-transform: uppercase;
+    color: #777;
+    margin-top: 3px;
+  }
+  .details-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .target-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 2px;
+    margin-bottom: 3px;
+  }
+  .target-name {
+    font-size: 12px;
+    font-weight: 700;
+  }
+  .target-specs {
+    font-size: 9.5px;
+    color: #555;
+  }
+  .notes {
+    font-size: 10px;
+    color: #222;
+  }
+  .notes strong {
+    color: #111;
+  }
+  .footer {
+    margin-top: 6px;
+    border-top: 1px solid #ccc;
+    padding-top: 4px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 8.5px;
+    color: #777;
+  }
+</style>
+</head>
+<body>
+
+  <table class="header-table">
+    <tr>
+      <td>
+        <div class="title">Night Sky Observation Log &bull; Session 2</div>
+        <div class="subtitle">Celestron StarSense Explorer 150mm Dobsonian &bull; Visual Log</div>
+      </td>
+      <td style="text-align: right;">
+        <strong>Observers:</strong> Kristina &amp; Steve<br>
+        <strong>Location:</strong> Backyard
+      </td>
+    </tr>
+  </table>
+
+  <div class="meta-grid">
+    <div class="meta-item">
+      <strong>Date</strong>
+      September 11–12, 2026
+    </div>
+    <div class="meta-item">
+      <strong>Session Time</strong>
+      10:30 PM – 2:15 AM EDT
+    </div>
+    <div class="meta-item">
+      <strong>Sky Conditions</strong>
+      Transp: 4.5/5 &bull; Seeing: 4.0/5
+    </div>
+    <div class="meta-item">
+      <strong>Optics / Eyepieces</strong>
+      150mm Dob (20mm, 10mm, 5mm)
+    </div>
+  </div>
+
+  <!-- Entry 1: Saturn -->
+  <div class="log-entry">
+    <div class="sketch-col">
+      <div class="sketch-circle">
+        <svg width="56" height="56" viewBox="0 0 56 56">
+          <ellipse cx="28" cy="28" rx="22" ry="3.5" fill="none" stroke="#d4b26f" stroke-width="1.2" transform="rotate(-6 28 28)" />
+          <circle cx="28" cy="28" r="8" fill="#e8cb82" />
+          <path d="M 20 28 Q 28 30 36 28" stroke="#3a2e12" stroke-width="0.8" fill="none" transform="rotate(-6 28 28)" />
+          <line x1="28" y1="12" x2="28" y2="44" stroke="#e8cb82" stroke-width="0.5" stroke-dasharray="1,2" opacity="0.6"/>
+          <line x1="12" y1="28" x2="44" y2="28" stroke="#e8cb82" stroke-width="0.5" stroke-dasharray="1,2" opacity="0.6"/>
+          <circle cx="48" cy="24" r="1" fill="#fff" />
+          <circle cx="21" cy="29" r="0.6" fill="#ddd" />
+        </svg>
+      </div>
+      <div class="sketch-label">5mm Field (150x)</div>
+    </div>
+    <div class="details-col">
+      <div class="target-header">
+        <span class="target-name">1. Saturn &amp; System (Bookend Views)</span>
+        <span class="target-specs">Aquarius (SE &rarr; SSW) &bull; 10mm (75x) &amp; 5mm (150x)</span>
+      </div>
+      <div class="notes">
+        First telescopic look; razor-sharp warm yellow-gold globe and ring plane. Rings appeared nearly edge-on with front dipping slightly down and back tilted up. Observed thin dark ring shadow across the globe, soft starburst halo, and subtle 4-point spikes. Resolved distant bright pinpoint of <strong>Titan</strong> plus an inner moon (Rhea/Tethys) nestled close. Timed field drift: 50 seconds center-to-edge at 150x. Returned at 2:00 AM for a final look.
+      </div>
+    </div>
+  </div>
+
+  <!-- Entry 2: Pleiades -->
+  <div class="log-entry">
+    <div class="sketch-col">
+      <div class="sketch-circle">
+        <svg width="56" height="56" viewBox="0 0 56 56">
+          <circle cx="24" cy="26" r="1.6" fill="#d8ecff"/>
+          <circle cx="29" cy="24" r="1.4" fill="#d8ecff"/>
+          <circle cx="34" cy="28" r="1.4" fill="#d8ecff"/>
+          <circle cx="30" cy="33" r="1.4" fill="#d8ecff"/>
+          <circle cx="22" cy="32" r="1.3" fill="#d8ecff"/>
+          <circle cx="18" cy="25" r="1.2" fill="#d8ecff"/>
+          <circle cx="40" cy="22" r="1.3" fill="#ffffff"/>
+          <circle cx="42" cy="25" r="1.0" fill="#ffffff"/>
+          <circle cx="14" cy="36" r="0.8" fill="#aaccff"/>
+          <circle cx="37" cy="36" r="0.7" fill="#88aacc"/>
+        </svg>
+      </div>
+      <div class="sketch-label">20mm Field (37.5x)</div>
+    </div>
+    <div class="details-col">
+      <div class="target-header">
+        <span class="target-name">2. The Pleiades (Messier 45)</span>
+        <span class="target-specs">Taurus (East) &bull; Naked Eye, 10mm, 20mm</span>
+      </div>
+      <div class="notes">
+        Naked-eye view presented as a delicate, shimmering unresolved fuzzy patch. 10mm required panning across the field, while 20mm framed the entire cluster like a jewel box. Counted <strong>8–9 prominent primary stars</strong>: 6 forming a distinct "mini dipper" bowl with 2 outliers marking the handle/edge. Unmatched contrast between brilliant icy blue-white anchors and delicate pinpoints over a flat, jet-black background (no nebulosity detected).
+      </div>
+    </div>
+  </div>
+
+  <!-- Entry 3: Aldebaran -->
+  <div class="log-entry">
+    <div class="sketch-col">
+      <div class="sketch-circle">
+        <svg width="56" height="56" viewBox="0 0 56 56">
+          <line x1="28" y1="6" x2="28" y2="50" stroke="#ffaa33" stroke-width="0.8" />
+          <line x1="6" y1="28" x2="50" y2="28" stroke="#ffaa33" stroke-width="0.8" />
+          <line x1="28" y1="28" x2="28" y2="52" stroke="#ff8800" stroke-width="2.2" opacity="0.75" />
+          <circle cx="28" cy="28" r="5" fill="#ffcc44" />
+          <circle cx="28" cy="28" r="8" fill="none" stroke="#ffaa33" stroke-width="0.5" stroke-dasharray="1.5,1.5" />
+        </svg>
+      </div>
+      <div class="sketch-label">10mm Field (75x)</div>
+    </div>
+    <div class="details-col">
+      <div class="target-header">
+        <span class="target-name">3. Aldebaran (Alpha Tauri)</span>
+        <span class="target-specs">Taurus (East) &bull; 20mm, 5mm, 10mm</span>
+      </div>
+      <div class="notes">
+        The "Eye of the Bull" appeared as a blazing, molten golden nugget in the 20mm. Switching to 5mm produced edge hazing and a dark annular blackout ring (exit pupil/eye relief boundary). The 10mm delivered the sweet spot: deep golden hue with prominent 4-point diffraction cross spikes. Noted the lower vertical spike was noticeably thicker than the rest—caused by tube boundary layer thermal currents and low-altitude atmospheric dispersion.
+      </div>
+    </div>
+  </div>
+
+  <!-- Entry 4: Orion's Belt &amp; M42 -->
+  <div class="log-entry">
+    <div class="sketch-col">
+      <div class="sketch-circle">
+        <svg width="56" height="56" viewBox="0 0 56 56">
+          <!-- Nebular Wing -->
+          <path d="M 28 30 C 22 28, 14 33, 12 40 C 14 44, 25 43, 30 35 Z" fill="#1b2838" stroke="#2d425a" stroke-width="0.6"/>
+          <!-- Trapezium -->
+          <circle cx="27" cy="31" r="0.9" fill="#fff"/>
+          <circle cx="29" cy="30.5" r="0.9" fill="#fff"/>
+          <circle cx="27.5" cy="33" r="0.8" fill="#fff"/>
+          <circle cx="29.5" cy="32.5" r="0.7" fill="#fff"/>
+          <!-- 3-star line out the top (inverted scope view) -->
+          <circle cx="28" cy="18" r="1.1" fill="#cce0ff"/>
+          <circle cx="29" cy="12" r="0.9" fill="#cce0ff"/>
+          <circle cx="30" cy="6" r="0.8" fill="#cce0ff"/>
+        </svg>
+      </div>
+      <div class="sketch-label">5mm Field (150x)</div>
+    </div>
+    <div class="details-col">
+      <div class="target-header">
+        <span class="target-name">4. Great Orion Nebula (Messier 42) &amp; Sword</span>
+        <span class="target-specs">Orion (East / SE) &bull; Naked Eye, 20mm, 5mm (150x)</span>
+      </div>
+      <div class="notes">
+        Viewed Belt naked-eye to appreciate its full 3° span. In the sword, M42 started as a faint smudge in the 20mm before blooming into dramatic structure at 5mm. The cloud displayed a distinctive swept single-wing fan shape with a moody dark navy tone. Cleanly split all <strong>4 stars of the central Trapezium cluster</strong>. Traced a prominent line of three stars extending out from the top edge of the cloud toward the sword tip.
+      </div>
+    </div>
+  </div>
+
+  <!-- Entry 5: Horsehead Attempt -->
+  <div class="log-entry">
+    <div class="sketch-col">
+      <div class="sketch-circle">
+        <svg width="56" height="56" viewBox="0 0 56 56">
+          <circle cx="18" cy="20" r="3.2" fill="#fff" opacity="0.9"/>
+          <line x1="18" y1="12" x2="18" y2="28" stroke="#fff" stroke-width="0.5" opacity="0.5"/>
+          <line x1="10" y1="20" x2="26" y2="20" stroke="#fff" stroke-width="0.5" opacity="0.5"/>
+          <!-- Star field -->
+          <circle cx="34" cy="16" r="0.8" fill="#ddd"/>
+          <circle cx="42" cy="22" r="0.7" fill="#ddd"/>
+          <circle cx="30" cy="32" r="0.9" fill="#fff"/>
+          <circle cx="38" cy="38" r="0.6" fill="#bbb"/>
+          <circle cx="46" cy="30" r="0.7" fill="#bbb"/>
+          <circle cx="24" cy="42" r="0.7" fill="#ddd"/>
+          <circle cx="14" cy="36" r="0.6" fill="#999"/>
+        </svg>
+      </div>
+      <div class="sketch-label">20mm Field (37.5x)</div>
+    </div>
+    <div class="details-col">
+      <div class="target-header">
+        <span class="target-name">5. Alnitak Field (Horsehead Region / Barnard 33 Attempt)</span>
+        <span class="target-specs">Orion's Belt &bull; 20mm (37.5x) &amp; 10mm (75x)</span>
+      </div>
+      <div class="notes">
+        Scanned the eastern Belt region off Alnitak attempting visual detection of the Horsehead Nebula. No dark silhouette or faint emission mist was resolved due to Alnitak's intense glare and human eye insensitivity to faint H-alpha wavelengths. Instead, resolved a stunning, dense <strong>"sheet of stars"</strong> filling the background field. Excellent lesson in visual limits vs. long-exposure astrophotography.
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span>Equipment: Celestron StarSense Explorer 150mm Dobsonian &bull; Logged Hand-to-Eye</span>
+    <span>Late Summer / Early Autumn Session 2 &bull; Page 1 of 1</span>
+  </div>
+
+</body>
+</html>
