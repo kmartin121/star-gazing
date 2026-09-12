@@ -93,9 +93,30 @@
     font-size: 11px;
     color: #777;
   }
-  @media (max-width: 560px) {
+  @media screen and (max-width: 560px) {
     .meta-grid { grid-template-columns: 1fr; }
     .session-header { flex-direction: column; gap: 2px; }
+  }
+  @media print {
+    @page {
+      size: letter portrait;
+      margin: 0.35in;
+    }
+    body {
+      max-width: none;
+      padding: 0;
+      font-size: 10.5px;
+    }
+    .meta-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .session-header {
+      flex-direction: row;
+    }
+    .session:hover {
+      border-color: #ccc;
+      background: transparent;
+    }
   }
 </style>
 </head>

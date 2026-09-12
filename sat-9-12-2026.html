@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Backyard Stargazing Log - Session 2</title>
 <style>
   @page {
@@ -125,6 +126,73 @@
     justify-content: space-between;
     font-size: 8.5px;
     color: #777;
+  }
+  @media screen and (max-width: 560px) {
+    body {
+      padding: 16px;
+      font-size: 14px;
+      line-height: 1.4;
+    }
+    .title { font-size: 18px; }
+    .subtitle { font-size: 12px; }
+    .meta-grid {
+      grid-template-columns: 1fr;
+      gap: 8px;
+      padding: 8px 10px;
+      margin-bottom: 14px;
+    }
+    .meta-item strong { font-size: 9px; }
+    .log-entry {
+      grid-template-columns: 1fr;
+      gap: 8px;
+      padding: 12px 14px;
+      margin-bottom: 10px;
+    }
+    .sketch-col {
+      border-right: none;
+      border-bottom: 1px dashed #ddd;
+      padding-right: 0;
+      padding-bottom: 8px;
+    }
+    .target-header {
+      flex-direction: column;
+      gap: 2px;
+      align-items: flex-start;
+    }
+    .target-name { font-size: 15px; }
+    .target-specs { font-size: 12px; }
+    .notes { font-size: 13px; }
+    .footer {
+      flex-direction: column;
+      gap: 4px;
+      font-size: 11px;
+    }
+  }
+  @media print {
+    body {
+      padding: 0;
+      font-size: 10.5px;
+      line-height: 1.35;
+    }
+    .meta-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    .log-entry {
+      grid-template-columns: 80px 1fr;
+    }
+    .sketch-col {
+      border-right: 1px dashed #ddd;
+      border-bottom: none;
+      padding-right: 6px;
+      padding-bottom: 0;
+    }
+    .target-header {
+      flex-direction: row;
+      align-items: baseline;
+    }
+    .footer {
+      flex-direction: row;
+    }
   }
 </style>
 </head>
